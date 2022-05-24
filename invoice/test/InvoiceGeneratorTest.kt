@@ -28,8 +28,9 @@ class InvoiceGeneratorTest : StringSpec() {
             InvoiceGenerator().calculateFair(listOf(rideOne, rideTwo)) shouldBeExactly  46.2
         }
 
-
-
+        "No ride at all" {
+            InvoiceGenerator().calculateFair(listOf()) shouldBeExactly  0.0
+        }
 
     }
 }
